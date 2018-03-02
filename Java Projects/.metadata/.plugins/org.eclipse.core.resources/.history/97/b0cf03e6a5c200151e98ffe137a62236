@@ -1,0 +1,20 @@
+package OpenningWindow;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class HelpW extends JFrame{
+	JLabel l;
+	public void mess(){
+		l=new JLabel(" Ok i m  comming ");
+		add(l);
+		HelpW k= new HelpW();
+		k.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		k.setVisible(true);;
+		k.setSize(700,500);
+		k.mess();
+	}
+
+	 
+
+}

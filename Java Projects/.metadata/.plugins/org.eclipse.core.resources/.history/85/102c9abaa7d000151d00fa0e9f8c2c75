@@ -1,0 +1,48 @@
+package Sorting;
+
+public class ShellSort {
+
+	/**
+	 * @param args
+	 */
+	public static int[] a={1,223,35,56,67,787,889,98,56,5,42,45,56};
+	public void exchange(int[] a,int x,int y){
+		int swap=0;
+		
+		swap=a[y];
+		a[y]=a[x];
+		a[x]=swap;
+		
+		
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ShellSort ob=new ShellSort();
+		int n=a.length;
+		int h=1;
+		while(h<n/3){
+			h=3*h+1;
+			
+		}
+		System.out.println(h);
+		while(h>=1){
+			for(int i=h;i<n;i++){
+				for(int j=i;j>=h;j-=h){
+					if(a[j]<a[j-h]){
+						ob.exchange(a, j, j-h);
+					}
+					h=h/3;
+						
+				}
+			}
+			
+		}
+		for(int i=0;i<n;i++){
+			System.out.print(" "+a[i]);
+		}
+		
+
+	}
+
+}
